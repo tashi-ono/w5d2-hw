@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  min-height: 3rem;
+  background: green;
+  padding-left: 40px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30vw;
+  list-style: none;
+}
