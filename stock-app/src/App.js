@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Home from "./components/Home";
 import Dashboard from "./components/Dashboard";
 import Nav from "./components/Nav";
@@ -10,17 +10,10 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
-
-import "./App.css";
 // import stocksData from "./stock-data";
+import "./App.css";
 
 function App() {
-  // const [price, setPrice] = useState(null);
-
-  // const handleClickApp = (price) => {
-  //   console.log("App - handleClick - price", price);
-  //   setPrice(price);
-  // };
   return (
     <Router>
       <div className="App">
@@ -31,17 +24,10 @@ function App() {
           <Route exact path="/stocks" component={Dashboard} />
           <Route
             exact
-            path="/stocks:symbol"
-            render={(routerProps) => (
-              <Stock
-                // handleClickApp={handleClickApp}
-                {...routerProps}
-                // price={price}
-              />
-            )}
+            path="/stocks/:symbol"
+            render={(routerProps) => <Stock match={routerProps.match} />}
           />
-
-          <Route path="*" render={() => <Redirect to="/stocks" />} />
+          <Redirect to="/stocks" />
         </Switch>
       </div>
     </Router>

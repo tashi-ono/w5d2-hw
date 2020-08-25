@@ -11,7 +11,7 @@ nav {
   padding-left: 40px;
 }
 
-ul {
+.nav-links {
   display: flex;
   justify-content: space-around;
   align-items: center;

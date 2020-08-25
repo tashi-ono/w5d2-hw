@@ -12,13 +12,11 @@ function Nav() {
       <Link style={linkStyle} to="/">
         <h3>iStocks</h3>
       </Link>
-      <ul>
+      <ul className="nav-links">
         <Link style={linkStyle} to="/stocks">
-          <li>Home</li>
+          <li>Dashboard</li>
         </Link>
-        {/* <Link style={linkStyle} to="/stocks:symbol">
-          <li>Stocks</li>
-        </Link> */}
+
         <Link style={linkStyle} to="/about">
           <li>About</li>
         </Link>

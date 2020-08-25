@@ -19,6 +19,7 @@ function Dashboard() {
       </div>
     );
   });
+
   return (
     <div className="dashboard">
       <h3>Dashboard</h3>
